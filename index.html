@@ -1,0 +1,289 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Hayat Pharmacy - Karimuddinpur, Ghosi, Mau</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pharmacy-blue': '#1E3A8A',
+                        'pharmacy-light-blue': '#3B82F6',
+                        'medical-white': '#F8FAFC',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-medical-white text-gray-800 font-sans">
+
+<!-- Header -->
+<header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-pharmacy-blue">
+    <div class="container mx-auto px-4 py-6">
+        <!-- Pharmacy Logo & Name -->
+        <div class="text-center mb-8">
+            <div class="inline-flex items-center bg-pharmacy-blue text-white px-6 py-4 rounded-2xl shadow-2xl mb-4">
+                <i class="fas fa-prescription-bottle-alt text-3xl mr-4"></i>
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-bold">Al Hayat Pharmacy</h1>
+                    <p class="text-lg opacity-90">Karimuddinpur, Ghosi, Mau</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Prominent Upload Prescription Button -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button id="uploadPrescriptionBtn" class="bg-pharmacy-blue hover:bg-pharmacy-light-blue text-white px-12 py-5 rounded-2xl font-bold text-xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300 flex items-center space-x-3 w-full sm:w-auto">
+                <i class="fas fa-file-upload text-2xl"></i>
+                <span>Upload Prescription</span>
+            </button>
+            <div class="text-center sm:text-left">
+                <p class="text-sm text-gray-600">24x7 Medicine Delivery Available</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Navigation -->
+<nav class="bg-pharmacy-blue text-white shadow-lg">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-center gap-2 py-4">
+            <a href="#home" class="px-6 py-3 rounded-xl hover:bg-pharmacy-light-blue transition-all duration-300 font-semibold flex items-center space-x-2">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="#medicines" class="px-6 py-3 rounded-xl hover:bg-pharmacy-light-blue transition-all duration-300 font-semibold flex items-center space-x-2">
+                <i class="fas fa-pills"></i>
+                <span>Indian Medicines</span>
+            </a>
+            <a href="#babycare" class="px-6 py-3 rounded-xl hover:bg-pharmacy-light-blue transition-all duration-300 font-semibold flex items-center space-x-2">
+                <i class="fas fa-baby"></i>
+                <span>Baby Care</span>
+            </a>
+            <a href="#general" class="px-6 py-3 rounded-xl hover:bg-pharmacy-light-blue transition-all duration-300 font-semibold flex items-center space-x-2">
+                <i class="fas fa-shopping-bag"></i>
+                <span>General Items</span>
+            </a>
+            <a href="#wellness" class="px-6 py-3 rounded-xl hover:bg-pharmacy-light-blue transition-all duration-300 font-semibold flex items-center space-x-2">
+                <i class="fas fa-spa"></i>
+                <span>Wellness</span>
+            </a>
+            <a href="#contact" class="px-6 py-3 rounded-xl hover:bg-pharmacy-light-blue transition-all duration-300 font-semibold flex items-center space-x-2">
+                <i class="fas fa-phone"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="bg-gradient-to-br from-pharmacy-blue to-pharmacy-light-blue text-white py-32 relative overflow-hidden">
+    <div class="container mx-auto px-4 text-center relative z-10">
+        <div class="animate-fadeInUp">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Your Trusted<br>Pharmacy Partner</h2>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-90">Authentic medicines with 24x7 delivery at your doorstep</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-lg mx-auto">
+                <a href="https://wa.me/919696449689" target="_blank" class="bg-white text-pharmacy-blue px-10 py-5 rounded-2xl font-bold text-xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center space-x-3">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    <span>Order Now</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="absolute inset-0 bg-black opacity-10"></div>
+</section>
+
+<!-- Categories Section -->
+<section id="categories" class="py-24 bg-medical-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-20">
+            <h3 class="text-4xl md:text-5xl font-bold text-pharmacy-blue mb-6">Shop by Category</h3>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Everything you need for health & wellness</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Baby Care Card -->
+            <div id="babycare" class="group bg-white border-2 border-gray-100 rounded-3xl p-10 hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 cursor-pointer hover:border-pharmacy-blue">
+                <div class="w-24 h-24 bg-gradient-to-br from-pink-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-baby text-white text-3xl"></i>
+                </div>
+                <h4 class="text-3xl font-bold text-gray-800 mb-6 text-center group-hover:text-pharmacy-blue transition-colors">Baby Care</h4>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="text-center p-4 hover:bg-pharmacy-light-blue hover:text-white rounded-xl transition-all duration-300">
+                        <i class="fas fa-baby-carriage text-2xl mb-3"></i>
+                        <span class="font-semibold block">Diapers</span>
+                    </div>
+                    <div class="text-center p-4 hover:bg-pharmacy-light-blue hover:text-white rounded-xl transition-all duration-300">
+                        <i class="fas fa-bottle-water text-2xl mb-3"></i>
+                        <span class="font-semibold block">Baby Food</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Indian Medicines Card -->
+            <div id="medicines" class="group bg-white border-2 border-gray-100 rounded-3xl p-10 hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 cursor-pointer hover:border-pharmacy-blue">
+                <div class="w-24 h-24 bg-gradient-to-br from-green-400 to-green-500 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-leaf text-white text-3xl"></i>
+                </div>
+                <h4 class="text-3xl font-bold text-gray-800 mb-6 text-center group-hover:text-pharmacy-blue transition-colors">Indian Medicines</h4>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="text-center p-4 hover:bg-pharmacy-light-blue hover:text-white rounded-xl transition-all duration-300">
+                        <i class="fas fa-spa text-2xl mb-3"></i>
+                        <span class="font-semibold block">Ayurvedic</span>
+                    </div>
+                    <div class="text-center p-4 hover:bg-pharmacy-light-blue hover:text-white rounded-xl transition-all duration-300">
+                        <i class="fas fa-pills text-2xl mb-3"></i>
+                        <span class="font-semibold block">Allopathic</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- General Items Card -->
+            <div id="general" class="group bg-white border-2 border-gray-100 rounded-3xl p-10 hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 cursor-pointer hover:border-pharmacy-blue">
+                <div class="w-24 h-24 bg-gradient-to-br from-blue-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-shopping-basket text-white text-3xl"></i>
+                </div>
+                <h4 class="text-3xl font-bold text-gray-800 mb-6 text-center group-hover:text-pharmacy-blue transition-colors">Daily Essentials</h4>
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3 p-4 hover:bg-pharmacy-light-blue hover:text-white rounded-xl transition-all duration-300">
+                        <i class="fas fa-toothbrush text-xl"></i>
+                        <span class="font-semibold">Toiletries</span>
+                    </div>
+                    <div class="flex items-center space-x-3 p-4 hover:bg-pharmacy-light-blue hover:text-white rounded-xl transition-all duration-300">
+                        <i class="fas fa-hand-sparkles text-xl"></i>
+                        <span class="font-semibold">Personal Care</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Wellness Section -->
+<section id="wellness" class="py-24 bg-gradient-to-r from-pharmacy-light-blue to-pharmacy-blue text-white">
+    <div class="container mx-auto px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-4xl md:text-5xl font-bold mb-8">Wellness & Supplements</h3>
+            <p class="text-xl mb-12 opacity-90">Multivitamins, Protein Powders & Health Supplements for complete wellness</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white bg-opacity-20 backdrop-blur-xl rounded-3xl p-8 hover:bg-opacity-30 transition-all duration-300">
+                    <i class="fas fa-capsules text-5xl mb-6 block mx-auto"></i>
+                    <h4 class="text-2xl font-bold mb-4">Multivitamins</h4>
+                    <p>Daily nutritional support</p>
+                </div>
+                <div class="bg-white bg-opacity-20 backdrop-blur-xl rounded-3xl p-8 hover:bg-opacity-30 transition-all duration-300">
+                    <i class="fas fa-dumbbell text-5xl mb-6 block mx-auto"></i>
+                    <h4 class="text-2xl font-bold mb-4">Protein Powders</h4>
+                    <p>Muscle building essentials</p>
+                </div>
+                <div class="bg-white bg-opacity-20 backdrop-blur-xl rounded-3xl p-8 hover:bg-opacity-30 transition-all duration-300">
+                    <i class="fas fa-heart text-5xl mb-6 block mx-auto"></i>
+                    <h4 class="text-2xl font-bold mb-4">Heart Health</h4>
+                    <p>Cardiac wellness products</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Prescription Upload Modal -->
+<div id="prescriptionModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50 p-6">
+    <div class="bg-white rounded-3xl p-10 max-w-md w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+        <div class="flex justify-between items-center mb-8">
+            <h3 class="text-3xl font-bold text-pharmacy-blue">Upload Prescription</h3>
+            <button onclick="closeModal()" class="text-3xl text-gray-500 hover:text-red-500 transition-all duration-200">&times;</button>
+        </div>
+        <div class="space-y-6">
+            <div>
+                <label class="block text-lg font-semibold text-gray-700 mb-4">Upload your prescription</label>
+                <div class="border-3 border-dashed border-pharmacy-blue border-opacity-50 rounded-2xl p-12 text-center hover:border-opacity-100 transition-all duration-300">
+                    <i class="fas fa-cloud-upload-alt text-5xl text-pharmacy-blue mb-4 block"></i>
+                    <input type="file" id="prescriptionFile" accept="image/*,.pdf" class="hidden">
+                    <p class="text-xl font-semibold text-gray-700 mb-2">Click to upload</p>
+                    <p class="text-sm text-gray-500">JPG, PNG or PDF (Max 10MB)</p>
+                </div>
+            </div>
+            <div class="flex gap-4 pt-4">
+                <button onclick="closeModal()" class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 py-4 rounded-2xl font-bold text-lg transition-all duration-200">Cancel</button>
+                <button onclick="submitPrescription()" class="flex-1 bg-pharmacy-blue hover:bg-pharmacy-light-blue text-white py-4 rounded-2xl font-bold text-lg transition-all duration-200 shadow-xl hover:shadow-2xl">Send to WhatsApp</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Floating WhatsApp Button -->
+<div class="fixed bottom-8 right-8 z-50 md:bottom-12 md:right-12">
+    <a href="https://wa.me/919696449689?text=Hi Al Hayat Pharmacy! I need help with my medicine order..." 
+       class="flex items-center space-x-4 bg-pharmacy-green hover:bg-emerald-600 text-white p-5 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 group" 
+       target="_blank">
+        <div class="w-14 h-14 bg-white bg-opacity-20 rounded-full flex items-center justify-center group-hover:bg-opacity-30 transition-all duration-300">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </div>
+        <span class="font-bold text-lg hidden lg:inline">WhatsApp<br><span class="text-sm">+91 96964 49689</span></span>
+    </a>
+</div>
+
+<!-- Footer -->
+<footer id="contact" class="bg-pharmacy-blue text-white py-16 mt-24">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+            <!-- Pharmacy Info -->
+            <div>
+                <div class="flex items-center justify-center md:justify-start mb-8">
+                    <i class="fas fa-prescription-bottle-alt text-4xl text-pharmacy-light-blue mr-4"></i>
+                    <h3 class="text-3xl font-bold">Al Hayat Pharmacy</h3>
+                </div>
+                <p class="text-xl mb-6 opacity-90">Your trusted healthcare partner serving Ghosi & surrounding areas</p>
+            </div>
+
+            <!-- Address -->
+            <div>
+                <h4 class="text-2xl font-bold mb-6 flex items-center justify-center md:justify-start">
+                    <i class="fas fa-map-marker-alt text-pharmacy-light-blue mr-3"></i>
+                    Address
+                </h4>
+                <div class="space-y-4 text-lg">
+                    <p><strong>📍 Location:</strong></p>
+                    <p class="font-semibold">Karimuddinpur, Madhooban Road<br>Ghosi, Mau<br>Uttar Pradesh 275305</p>
+                    <a href="https://maps.google.com/?q=Karimuddinpur,Madhooban+Road,Ghosi,Mau" target="_blank" class="inline-flex items-center space-x-2 text-pharmacy-light-blue hover:text-white underline font-semibold">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span>Open in Google Maps</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact & Timings -->
+            <div>
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-2xl font-bold mb-4 flex items-center justify-center md:justify-start">
+                            <i class="fab fa-whatsapp text-pharmacy-light-blue mr-3 text-2xl"></i>
+                            WhatsApp
+                        </h4>
+                        <a href="https://wa.me/919696449689" target="_blank" class="block text-2xl font-bold text-pharmacy-light-blue hover:text-white transition-colors">+91 96964 49689</a>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-bold mb-4 flex items-center justify-center md:justify-start">
+                            <i class="fas fa-clock text-pharmacy-light-blue mr-3"></i>
+                           
